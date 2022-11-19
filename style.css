@@ -100,7 +100,8 @@ nav ul li a:hover::after {
     text-align: center;
 }
 .header-text h1 span {
-    color: #ffae00;
+    /* color: #ffae00; */
+    color: #ff7003;
 }
 .header-text p {
     align-self: flex-end;
@@ -178,7 +179,8 @@ Contact
 .job-title, .school-major {
     margin-top: 200px;
     font-size: 40px;
-    color: #ffae00;
+    /* color: #ffae00; */
+    color: #ff7003;
     text-align: center;
 }
 .company, .school {
@@ -189,7 +191,7 @@ Contact
 
 #education .note {
     font-size: 25px;
-    margin-top: -50px;
+    margin-top: -30px;
     margin-bottom: 100px;
     padding: 0;
     line-height: 0;
@@ -250,6 +252,12 @@ Contact
 /* for Smaller Screen under 1310px */
 #open-icon, #close-icon {
     display: none;
+}
+#open-icon {
+    color: #ff7003;
+}
+#close-icon {
+    color: #4a4a4a;
 }
 
 @media (max-width: 1310px) {
