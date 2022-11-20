@@ -342,6 +342,10 @@ Contact
         font-size: 30px;
     }
 
+    nav ul {
+        width: 180px;
+    }
+
     nav ul li a {
         font-size: 20px;
     }

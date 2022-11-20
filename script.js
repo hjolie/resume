@@ -1,4 +1,4 @@
-// Hamburger Menu
+// ---------------------- Hamburger Menu --------------------- //
 const sideMenu = document.getElementById('side-menu');
 const openIcon = document.getElementById('open-icon');
 const closeIcon = document.getElementById('close-icon');
@@ -29,31 +29,18 @@ closeIcon.addEventListener('click', () => {
 })
 
 
-// Go Top Button
+// ---------------------- Go Top Button --------------------- //
 const goTop = document.querySelector('.go-top');
 
 window.addEventListener('scroll', () => {
     const scrollHeight = window.pageYOffset;
 
-    
     if (scrollHeight > 500 && sideMenu.style.left !== "0") {
         openIcon.classList.add('fixed-open-icon');
     }
     else {
         openIcon.classList.remove('fixed-open-icon');
-    }
-    
-
-    // if (window.matchMedia('(max-width: 1310px)').matches) {
-    //     if (sideMenu.style.left === "0") {
-    //         openIcon.classList.remove('fixed-open-icon');
-    //     } else if (scrollHeight > 500) {
-    //         openIcon.classList.add('fixed-open-icon');
-    //     }
-    //     else {
-    //         openIcon.classList.remove('fixed-open-icon');
-    //     }
-    // }
+    }    
 
     if (scrollHeight > 500) {
         goTop.classList.add('show-go-top');
