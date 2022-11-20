@@ -189,15 +189,6 @@ Contact
     color: #4a4a4a;
 }
 
-#education .note {
-    font-size: 25px;
-    margin-top: -30px;
-    margin-bottom: 100px;
-    padding: 0;
-    line-height: 0;
-    color: #6b6b6b;
-}
-
 #experience .location, #experience .year-month, #education .location, #education .year-month {
     padding: 0;
     margin-top: 40px;
@@ -205,6 +196,18 @@ Contact
     line-height: 5px;
     color: #6b6b6b;
     align-self: flex-end;
+}
+
+#education .note {
+    font-size: 25px;
+    margin-top: -50px;
+    margin-bottom: 100px;
+    padding: 0;
+    line-height: 50px;
+    color: #6b6b6b;
+}
+#education .note:last-child {
+    margin-top: 50px;
 }
 
 /* ******************
@@ -215,8 +218,8 @@ Contact
     position: fixed;
     background-color: #ffae00;
     color: white;
-    bottom: 5rem;
     right: 10rem;
+    bottom: 5rem;
     width: 2rem;
     height: 2rem;
     border-radius: 10px;
@@ -228,7 +231,6 @@ Contact
 }
 
 .go-top:hover {
-    background-color: #ffae00;
     color: #4a4a4a;
 }
 
@@ -249,25 +251,35 @@ Contact
     }
 }
 
-/* for Smaller Screen under 1310px */
+/* ***********************
+    Open & Close Icons
+************************** */
 #open-icon, #close-icon {
     display: none;
+    font-size: 40px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 #open-icon {
-    color: #ff7003;
+    color: #ffae00;
+}
+#open-icon:hover {
+    color: #4a4a4a;;
 }
 #close-icon {
     color: #4a4a4a;
 }
+#close-icon:hover {
+    color: #000;
+}
 
+/*---------- Screen under 1310px ----------*/
 @media (max-width: 1310px) {
     #open-icon, #close-icon {
         display: block;
-        font-size: 40px;
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        cursor: pointer;
     }
 
     nav ul {
@@ -299,5 +311,100 @@ Contact
 
     .show-menu {
         left: 0;
+    }
+
+    #open-icon.fixed-open-icon {
+        position: fixed;
+        top: 30px;
+        left: 30px;
+    }
+}
+
+/*---------- Screen under 1000px ----------*/
+@media (max-width: 1000px) {
+    .go-top {
+        right: 5rem;
+        bottom: 5rem;
+    }
+}
+
+/*---------- Screen under 600px ----------*/
+@media (max-width: 600px) {
+    .go-top {
+        right: 3rem;
+        bottom: 3rem;
+        font-size: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    #open-icon, #close-icon {
+        font-size: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 70px;
+    }
+
+    .header-text p {
+        align-self: center;
+        font-size: 30px;
+        width: 300px;
+        border-bottom: #ffae00 solid 3px;
+    }
+
+    .contact-container {
+        margin-top: 100px;
+    }
+
+    .subtitle {
+        font-size: 35px;
+        width: 220px;
+    }
+
+    #skills .subtitle {
+        word-spacing: 10px;
+    }
+
+    #about p, #skills p, #experience p, #education p, #contact a, #contact p {
+        font-size: 20px;
+        line-height: 50px;
+    }
+
+    #contact p {
+        margin-top: 10px;
+    }
+
+    .dot {
+        font-size: 35px;
+    }
+
+    .job-title, .school-major {
+        font-size: 25px;
+        margin-top: 100px;
+    }
+    .job-title:nth-of-type(1), .school-major:nth-of-type(1) {
+        margin-top: 50px;
+    }
+
+    .company, .school {
+        font-size: 20px;
+    }
+
+    #experience .location, #experience .year-month, #education .location, #education .year-month {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    #education .note {
+        font-size: 16px;
+        margin-top: 0;
+    }
+    #education .note:last-child {
+        margin-top: 20px;
     }
 }
